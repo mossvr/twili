@@ -189,6 +189,8 @@ Twili::Config::Config() {
 		tcp_bridge_port = reader.GetInteger("tcp_bridge", "port", tcp_bridge_port);
 
 		state = State::Loaded;
+
+		fclose(f);
 	}
 }
 
